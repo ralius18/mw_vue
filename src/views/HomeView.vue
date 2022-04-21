@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <Tabs active="home" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { useRouter } from 'vue-router';
+
+// Components
+import Tabs from '../components/Tabs.vue';
+import HeaderBar from '../components/HeaderBar.vue';
 
 export default defineComponent({
   name: 'HomeView',
+
   components: {
-    HelloWorld,
-  },
+    Tabs,
+    HeaderBar
+},
+
+  computed: {
+    isHomePage: () => {
+      return useRouter().currentRoute.value.name == 'home'
+    }
+  }
 });
 </script>
+
+<style scoped lang="scss">
+.logo-img {
+  margin: 50px;
+}
+.text-img {
+  margin: 4rem;
+  max-height: 100px
+}
+</style>

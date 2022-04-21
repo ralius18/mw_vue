@@ -1,0 +1,98 @@
+<template>
+  <Tabs active="listen" />
+
+  <v-container>
+    <v-row>
+      <v-col>
+        <div class="album-title">
+          <h3>{{ albums.inconvenience.title }}</h3>
+        </div>
+        <v-img class="album-img" :src="albums.inconvenience.imgUrl" />
+        <iframe :src="albums.inconvenience.spotifyPlayer" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </v-col>
+      <v-col>
+        <div class="album-title">
+          <h3>{{ albums.vanish.title }}</h3>
+        </div>
+        <v-img class="album-img" :src="albums.vanish.imgUrl" />
+        <iframe :src="albums.vanish.spotifyPlayer" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </v-col>
+    </v-row>
+  </v-container>
+
+  <div class="video">
+    <iframe :src="youtubePlaylist" allowtransparency="true" allow="encrypted-media" />
+  </div>
+
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+// Components
+import Tabs from '@/components/Tabs.vue';
+
+export default defineComponent({
+  name: 'ListenView',
+
+  components: {
+    Tabs
+  },
+  
+  data () {
+    return {
+      albums: {
+        inconvenience: {
+          title: 'Inconvenience',
+          imgUrl: require('@/assets/images/albums/inconvenience.jpg'),
+          spotifyPlayer: `https://open.spotify.com/embed/album/3zUJexvHW0Ec4k7uwokpJk`
+        },
+        vanish: {
+          title: 'These Versions May Vanish If We Record Them In Studio. But For Now, Here\'s Some Music (Live)',
+          imgUrl: require('@/assets/images/albums/vanish.jpg'),
+          spotifyPlayer: `https://open.spotify.com/embed/album/4Ztmg6XikrrwdZkvQAcay0`
+        }
+      },
+
+      youtubePlaylist: `https://youtube.com/embed/videoseries?list=PLgn9dMyvha4idhVHZESuQrxRXfJzs29MQ`
+    }
+  }
+});
+</script>
+
+<style scoped lang="scss">
+.v-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.album-img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid white;
+  margin: 20px auto 50px;
+}
+
+.album-title {
+  height: 100px;
+  display: flex
+}
+
+iframe {
+  border: 2px solid white
+}
+
+.video {
+  width: 800px;
+  aspect-ratio: 16 / 9;
+  max-width: 90%;
+  margin: 50px auto;
+
+  & iframe{
+    width: 100%;
+    height: 100%;
+    // border: none;
+  }
+}
+</style>

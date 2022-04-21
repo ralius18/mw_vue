@@ -1,0 +1,36 @@
+.v-main {
+  width: 100%;
+  background: url("./assets/images/bg.jpg");
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: white black;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .3);
+  background-color: grey;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Roboto Condensed';
+  line-height: 1.5;
+  margin: 0 auto;
+}
