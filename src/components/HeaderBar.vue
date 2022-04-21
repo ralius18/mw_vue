@@ -2,13 +2,14 @@
   <v-img
     v-if="isHomePage"
     class="logo-img"
+    :class="imageLoading ? 'load' : ''"
     src="@/assets/images/mw-submark.svg"
-    max-height="40vh" />
+    v-on:load="imageLoaded()"
+    height="40vh" />
   <v-img
     v-else
     class="text-img"
     src="@/assets/images/mw-text.svg" />
-  <!-- <Tabs :active="active" /> -->
 </template>
 
 <script lang="ts">
@@ -20,11 +21,18 @@ export default defineComponent({
 
   data () {
     return {
+      imageLoading: true
     }
   },
 
   props: {
     active: String
+  },
+
+  methods: {
+    imageLoaded () {
+      this.imageLoading = false
+    }
   },
 
   computed: {
@@ -38,9 +46,14 @@ export default defineComponent({
 <style scoped lang="scss">
 .logo-img {
   margin: 50px;
+  transition: opacity 3000ms;
+
+  &.load {
+    opacity: 0;
+  }
 }
 .text-img {
-  margin: 4rem;
-  max-height: 100px
+  margin: 50px auto;
+  height: 100px
 }
 </style>

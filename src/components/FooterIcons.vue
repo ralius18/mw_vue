@@ -1,24 +1,38 @@
 <template>
-  <v-row justify="center">
-    <a :href="links.spotify" target="_blank">
-      <v-img class="social-icon" src="@/assets/images/socials/spotify.svg" />
-    </a>
-    <a :href="links.itunes" target="_blank">
-    <v-img class="social-icon" src="@/assets/images/socials/itunes.svg" />
-    </a>
-    <a :href="links.ytmusic" target="_blank">
-    <v-img class="social-icon" src="@/assets/images/socials/ytmusic.svg" />
-    </a>
-    <a :href="links.youtube" target="_blank">
-    <v-img class="social-icon" src="@/assets/images/socials/youtube.svg" />
-    </a>
-    <a :href="links.facebook" target="_blank">
-    <v-img class="social-icon" src="@/assets/images/socials/facebook.svg" />
-    </a>
-    <a :href="links.instagram" target="_blank">
-    <v-img class="social-icon" src="@/assets/images/socials/instagram.svg" />
-    </a>
-  </v-row>
+  <v-container>
+    <v-row>
+      <v-col cols="4" sm="2" class="center">
+        <a :href="links.spotify" target="_blank">
+          <v-img class="" max-height="30" width="30" src="@/assets/images/socials/spotify.svg" />
+        </a>
+      </v-col>
+      <v-col cols="4" sm="2" class="center">
+        <a :href="links.itunes" target="_blank">
+          <v-img class="social-icon" max-height="30" width="30" src="@/assets/images/socials/itunes.svg" />
+        </a>
+      </v-col>
+      <v-col cols="4" sm="2" class="center">
+        <a :href="links.ytmusic" target="_blank">
+          <v-img class="social-icon" max-height="30" width="30" src="@/assets/images/socials/ytmusic.svg" />
+        </a>
+      </v-col>
+      <v-col cols="4" sm="2" class="center">
+        <a :href="links.youtube" target="_blank">
+          <v-img class="social-icon" max-height="30" width="30" src="@/assets/images/socials/youtube.svg" />
+        </a>
+      </v-col>
+      <v-col cols="4" sm="2" class="center">
+        <a :href="links.facebook" target="_blank">
+          <v-img class="social-icon" max-height="30" width="30" src="@/assets/images/socials/facebook.svg" />
+        </a>
+      </v-col>
+      <v-col cols="4" sm="2" class="center">
+        <a :href="links.instagram" target="_blank">
+          <v-img class="social-icon" max-height="30" width="30" src="@/assets/images/socials/instagram.svg" />
+        </a>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -42,14 +56,17 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.v-row{
-  margin: 0 auto;
-  max-width: 700px;
-}
+.v-container {
+  padding: 0;
 
-.social-icon {
-  width: 30px;
-  height: 30px;
-  margin: 30px;
+  .v-row{
+    margin: 20px auto;
+    max-width: 700px;
+
+    .center {
+      display: flex;
+      justify-content: center !important;
+    }
+  }
 }
 </style>

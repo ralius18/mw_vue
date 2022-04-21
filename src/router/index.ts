@@ -38,4 +38,13 @@ const router = createRouter({
   routes
 })
 
+router.afterEach((to, from) => {
+  let title = 'Mirrored Walls';
+  if (to.name && to.name !== 'home') {
+    let name = to.name.toString();
+    title += ' - ' + name[0].toUpperCase() + name.slice(1)
+  }
+  document.title = title;
+});
+
 export default router
