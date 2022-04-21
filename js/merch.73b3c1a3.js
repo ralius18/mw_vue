@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmw_vue"]=self["webpackChunkmw_vue"]||[]).push([[849],{7395:function(e,n,r){r.r(n),r.d(n,{default:function(){return f}});var u=r(3396);function c(e,n,r,c,t,a){const s=(0,u.up)("Tabs");return(0,u.wg)(),(0,u.j4)(s,{active:"merch"})}var t=r(240),a=(0,u.aZ)({name:"MerchView",components:{Tabs:t.Z}}),s=r(89);const o=(0,s.Z)(a,[["render",c]]);var f=o}}]);
+//# sourceMappingURL=merch.73b3c1a3.js.map

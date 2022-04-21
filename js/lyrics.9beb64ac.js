@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmw_vue"]=self["webpackChunkmw_vue"]||[]).push([[620],{7291:function(e,n,r){r.r(n),r.d(n,{default:function(){return o}});var u=r(3396);function c(e,n,r,c,s,t){const a=(0,u.up)("Tabs");return(0,u.wg)(),(0,u.j4)(a,{active:"lyrics"})}var s=r(240),t=(0,u.aZ)({name:"LyricsView",components:{Tabs:s.Z}}),a=r(89);const i=(0,a.Z)(t,[["render",c]]);var o=i}}]);
+//# sourceMappingURL=lyrics.9beb64ac.js.map
