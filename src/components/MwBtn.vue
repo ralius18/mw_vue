@@ -28,6 +28,7 @@ export default defineComponent({
     }
 
     transition: all 200ms;
+    letter-spacing: normal;
     border: 2px solid white;
     color: white;
   }

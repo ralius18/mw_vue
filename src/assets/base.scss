@@ -28,9 +28,10 @@ html {
   background-color: grey;
 }
 
-body {
+body, pre {
   font-size: 18px;
   font-family: 'Roboto Condensed';
   line-height: 1.5;
   margin: 0 auto;
+  color: white;
 }

@@ -45,26 +45,26 @@ export default defineComponent({
   data() {
     return {
       shows: [
-        {
-          location: 'Cabana',
-          date: '23/04/22',
-          time: '7pm',
-          friends: [
-            'Sons of Henrik',
-            'Happy Apathy'
-          ],
-          tickets: 'https://undertheradar.co.nz/'
-        },
-        {
-          location: 'Pasiley Stage',
-          date: '30/04/22',
-          time: '8:30pm',
-          friends: [
-            'Yes Yes No',
-            'Atlantic Wave'
-          ],
-          tickets: 'https://undertheradar.co.nz/'
-        }
+        // {
+        //   location: 'Cabana',
+        //   date: '23/04/22',
+        //   time: '7pm',
+        //   friends: [
+        //     'Sons of Henrik',
+        //     'Happy Apathy'
+        //   ],
+        //   tickets: 'https://undertheradar.co.nz/'
+        // },
+        // {
+        //   location: 'Pasiley Stage',
+        //   date: '30/04/22',
+        //   time: '8:30pm',
+        //   friends: [
+        //     'Yes Yes No',
+        //     'Atlantic Wave'
+        //   ],
+        //   tickets: 'https://undertheradar.co.nz/'
+        // }
       ]
     }
   }
