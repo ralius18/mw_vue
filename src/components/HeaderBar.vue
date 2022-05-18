@@ -1,15 +1,17 @@
 <template>
-  <v-img
-    v-if="isHomePage"
-    class="logo-img"
-    :class="imageLoading ? 'load' : ''"
-    src="@/assets/images/mw-submark.svg"
-    v-on:load="imageLoaded()"
-    height="40vh" />
-  <v-img
-    v-else
-    class="text-img"
-    src="@/assets/images/mw-text.svg" />
+  <a href="/">
+    <v-img
+      v-if="isHomePage"
+      class="logo-img"
+      :class="imageLoading ? 'load' : ''"
+      src="@/assets/images/mw-submark.svg"
+      v-on:load="imageLoaded()"
+      height="40vh" />
+    <v-img
+      v-else
+      class="text-img"
+      src="@/assets/images/mw-text.svg" />
+  </a>
 </template>
 
 <script lang="ts">
