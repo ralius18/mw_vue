@@ -4,19 +4,27 @@
   <div class="shows-table">
     <h2>Upcoming</h2>
     <v-table v-if="shows.length > 0">
-      <thead>
-        <th>Where</th>
-        <th>When</th>
-        <th>With</th>
-        <th></th>
-      </thead>
       <tbody>
         <tr v-for="show in shows">
-          <td>{{ show.location }}</td>
-          <td>{{ show.time }}<br>{{ show.date }}</td>
-          <td><ul><li v-for="friend in show.friends">{{ friend }}</li></ul></td>
           <td>
-            <MwBtn :href="show.tickets" target="_blank">Tickets</MwBtn>
+            <v-row>
+              <v-col>
+                <b>
+                  {{ show.date }} - {{ show.time }}<br>
+                  {{ show.location }}<br>
+                </b>
+              </v-col>
+              <v-col>
+                With friends:
+                <ul><li v-for="friend in show.friends">{{ friend }}</li></ul>
+              </v-col>
+            </v-row>
+          </td>
+          <td>
+            <MwBtn :href="show.tickets" target="_blank">
+              <div v-if="show.tickets != ''">Tickets</div>
+              <div v-else>Tickets<br>Available Soon</div>
+            </MwBtn>
           </td>
         </tr>
       </tbody>
@@ -40,7 +48,7 @@ export default defineComponent({
   components: {
     Tabs,
     MwBtn
-},
+  },
 
   data() {
     return {
@@ -55,17 +63,27 @@ export default defineComponent({
         //   ],
         //   tickets: 'https://undertheradar.co.nz/'
         // },
-        // {
-        //   location: 'Pasiley Stage',
-        //   date: '30/04/22',
-        //   time: '8:30pm',
-        //   friends: [
-        //     'Yes Yes No',
-        //     'Atlantic Wave'
-        //   ],
-        //   tickets: 'https://undertheradar.co.nz/'
-        // }
+        {
+          location: 'Cabana',
+          date: '19th August 22',
+          time: '7:30pm',
+          friends: [
+            'Bad Schematics',
+            'Grays Road'
+          ],
+          tickets: ''
+        }
       ]
+    }
+  },
+
+  methods: {
+    isMobile() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true;
+      } else {
+        return false;
+      }
     }
   }
 });

@@ -1,7 +1,7 @@
 <template>
   <Tabs active="lyrics" />
 
-  <div class="lyrics d-flex flex-row">
+  <v-container class="lyrics d-flex flex-row" v-if="!isMobile()">
     <v-tabs
       direction="vertical"
       v-model="tab"
@@ -26,7 +26,41 @@
       <pre class="lyric-text">{{ item.lyrics }}</pre>
       </v-window-item>
     </v-window>
-  </div>
+  </v-container>
+
+  <v-container class="lyrics mobile-content" v-else>
+    <v-tabs
+      direction="vertical"
+      v-model="tab"
+      v-if="tab == ''"
+    >
+      <v-tab style="display: none" value=""></v-tab>
+      <v-tab
+        v-for="item in songs"
+        :value="item.value"
+      >
+        <span class="text-capitalize font-weight-bold">
+          {{ item.title }}
+        </span>
+      </v-tab>
+    </v-tabs>
+
+    <v-container class="mobile-lyrics" v-else>
+      <MwBtn class="back-btn" @click="clearSelectedTab()">Back</MwBtn>
+      <v-window v-model="tab">
+        <v-window-item
+          v-for="item in songs"
+          :value="item.value"
+          transition="false"
+          reverse-transition="false"
+        >
+        <span class="text-capitalize font-weight-bold">{{ item.title }}</span>
+        <pre class="lyric-text">{{ item.lyrics }}</pre>
+        </v-window-item>
+      </v-window>
+      <MwBtn class="back-btn" @click="clearSelectedTab()">Back</MwBtn>
+    </v-container>
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -34,6 +68,7 @@ import { defineComponent } from 'vue';
 
 // Components
 import Tabs from '@/components/Tabs.vue';
+import MwBtn from '@/components/MwBtn.vue';
 
 export default defineComponent({
   name: 'LyricsView',
@@ -107,10 +142,6 @@ You're the only one, the only one I need\n\
 When gravity collapses beneath my feet\n\
 You're the only one who can help me\n\
 \n\
-How could I have been wrong\n\
-To not let you sing along\n\
-I'm lost in my head\n\
-Stuck in this same place again\n\
 How could I have been wrong\n\
 To not let you sing along\n\
 I'm lost in my head\n\
@@ -397,7 +428,52 @@ I'm choking up inside while the world watches me breathe\n`
         { 
           value: 'okay',
           title: 'It\'ll Be Okay',
-          lyrics: ``
+          lyrics: `We were going to raise our family\n\
+Who knows how things could be\n\
+If we'd met earlier without traumatic history\n\
+But I never thought I'd feel anything like the love we share\n\
+The tree we met by everyday\n\
+They'll cut it down soon enough\n\
+\n\
+It's been two weeks now without you\n\
+Well what am I supposed to do?\n\
+How do I raise our children with this cavern left inside?\n\
+The tree we met by everyday\n\
+It's the place you left me\n\
+Why would you taint that?\n\
+They'll cut it down soon enough\n\
+\n\
+Don't leave the shore just yet\n\
+Cos I'm not sure if there's a right choice\n\
+My mind's too fogged to make it out\n\
+The tree we met by everyday\n\
+I am on my way there\n\
+Tell me what to do\n\
+They'll cut it down soon enough\n\
+\n\
+I curse that you left\n\
+But I don't hate you, no\n\
+I can't be without you, no\n\
+I've never felt so alone\n\
+I can't wait\n\
+So I'll meet you there tonight\n\
+\n\
+I'm on my way\n\
+With our son and daughter\n\
+Don't cross the water just you wait for us\n\
+By the riverbank\n\
+Don't cross just yet\n\
+I've made up my mind\n\
+We'll see you soon\n\
+We're on our way\n\
+\n\
+Plead to the gods you're waiting for me\n\
+Even if we never meet them\n\
+The four of us together\n\
+I guess it must be heaven\n\
+I'm on my way\n\
+\n\
+Tell the kids it'll be okay`
         },
         { 
           value: 'ivory',
@@ -437,11 +513,11 @@ Used to be not an hour'd go by without you on my mind\n\
 Now we hold each other at arm's length to avoid causing pain\n\
 But darling can't you see our hands are barely even touching anymore\n\
 \n\
-Well I've been thinking lately\n\
+I've been thinking lately\n\
 What this life would be like if I didn't have you here\n\
 Cos you know honestly it would be hard slightly\n\
 But I think in time I would get on just fine\n\
-I'll be just fine\n\
+I'd be just fine\n\
 \n\
 I think we've been living too much in the reaches of time\n\
 All our focus is on the future and the past\n\
@@ -455,23 +531,25 @@ I've been thinking lately\n\
 What this life would be like if I didn't have you here\n\
 Cos you know honestly it would be hard slightly\n\
 But I think in time I would get on just fine\n\
-I'll be just fine\n\
+I'd be just fine\n\
 \n\
-Take your allocations\n\
-Recognise them as frustrations in your own inadequacies\n\
+Take your allegations\n\
+Recognise them as frustrations\n\
+In your own inadequacies\n\
 And I went through hell to find you\n\
 And I know that you did too\n\
 Maybe there's one more to navigate\n\
 'Til we find something true\n\
 \n\
-Oh I've been thinking, about what to do without you\n\
+Oh I've been thinking\n\
+About what to do without you\n\
 \n\
 I've been thinking lately\n\
 What this life would be like if I didn't have you here\n\
 Cos you know honestly it would be hard slightly\n\
 But I think in time I would get on just fine\n\
-I'll be just fine\n\
-And I've been thinking lately\n\
+I'd be just fine\n\
+I've been thinking lately\n\
 If I didn't have you\n`
         },
         { 
@@ -571,9 +649,6 @@ Might be easier to just let go\n\
 \n\
 Am I wrong for hating you\n\
 For what you've done to for all I've been through\n\
-Countless times you've made me numb\n\
-To many more left to come\n\
-You're the monster that broke my home\n\
 \n\
 What you need, is to lose it all\n\
 But even then will those blinds you chose to hide behind\n\
@@ -784,7 +859,22 @@ To find some meaning again\n`
   },
 
   components: {
-    Tabs
+    Tabs,
+    MwBtn
+  },
+
+  methods: {
+    isMobile() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+
+    clearSelectedTab() {
+      this.$data.tab = '';
+    }
   }
 });
 </script>
@@ -793,31 +883,40 @@ To find some meaning again\n`
   .lyrics {
     max-width: 900px;
     margin: 0 auto;
-  }
+    padding: 0 20px;
 
-  .v-tabs {
-    max-width: 250px;
-    .v-btn {
-      font-family: "Roboto Condensed";
-      font-weight: bold;
-      border: 2px solid white;
-      color: white;
-      letter-spacing: normal;
-      font-size: medium;
-      transition: all 200ms;
+    &.mobile-content {
+      max-width: 100%;
 
-      &:not(:last-child) {
-        border-bottom: none;
+      .v-tabs {
+        max-width: 100%;
       }
+    }
 
-      &.v-tab--selected {
-        color: black;
-        background-color: white;
-      }
+    .v-tabs {
+      max-width: 250px;
+      .v-btn {
+        font-family: "Roboto Condensed";
+        font-weight: bold;
+        border: 2px solid white;
+        color: white;
+        letter-spacing: normal;
+        font-size: medium;
+        transition: all 200ms;
 
-      &:hover {
-        color: black;
-        background-color: white;
+        &:not(:last-child) {
+          border-bottom: none;
+        }
+
+        &.v-tab--selected {
+          color: black;
+          background-color: white;
+        }
+
+        &:hover {
+          color: black;
+          background-color: white;
+        }
       }
     }
   }
@@ -825,6 +924,8 @@ To find some meaning again\n`
   .lyric-text {
     font-family: "Roboto Condensed";
     padding-top: 16px;
+    overflow-x: auto;
+    white-space: pre-wrap;
   }
 
   .v-window {
@@ -833,5 +934,22 @@ To find some meaning again\n`
       border: 2px solid white;
       padding: 16px;
     }
+  }
+
+  .back-btn {
+    width: 100%;
+    height: 48px;
+
+    &:first-child {
+      border-bottom: none;
+    }
+
+    &:last-child {
+      border-top: none;
+    }
+  }
+
+  .mobile-lyrics {
+    padding: 0;
   }
 </style>
