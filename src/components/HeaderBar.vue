@@ -1,5 +1,5 @@
 <template>
-  <a href="/">
+  <router-link to="/">
     <v-img
       v-if="isHomePage"
       class="logo-img"
@@ -11,7 +11,7 @@
       v-else
       class="text-img"
       src="@/assets/images/mw-text.svg" />
-  </a>
+  </router-link>
 </template>
 
 <script lang="ts">
