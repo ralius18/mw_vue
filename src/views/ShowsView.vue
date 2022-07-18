@@ -11,7 +11,8 @@
               <v-col>
                 <b>
                   {{ show.date }} - {{ show.time }}<br>
-                  {{ show.location }}<br>
+                  {{ show.venue }}<br>
+                  {{ show.city }}, {{ show.country }}<br>
                 </b>
               </v-col>
               <v-col>
@@ -64,12 +65,38 @@ export default defineComponent({
         //   tickets: 'https://undertheradar.co.nz/'
         // },
         {
-          location: 'Cabana',
-          date: '19th August 22',
-          time: '7:30pm',
+          venue: 'Cabana',
+          city: 'Napier',
+          country: 'NZ',
+          date: '19th August \'22',
+          time: '7.30pm',
           friends: [
             'Bad Schematics',
             'Grays Road'
+          ],
+          tickets: 'https://www.undertheradar.co.nz/gig/79682/Mirrored-Walls---Bad-Schematics---Grays-Road.utr'
+        },
+        {
+          venue: 'Venue TBD',
+          city: 'Palmerston North',
+          country: 'NZ',
+          date: '10th September \'22',
+          time: 'Time TBD',
+          friends: [
+            'Bad Schematics',
+            'TBD'
+          ],
+          tickets: ''
+        },
+        {
+          venue: 'Paisley Stage',
+          city: 'Napier',
+          country: 'NZ',
+          date: '8th October \'22',
+          time: 'Time TBD',
+          friends: [
+            'Bad Schematics',
+            'TBD'
           ],
           tickets: ''
         }
