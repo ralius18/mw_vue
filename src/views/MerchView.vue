@@ -5,7 +5,7 @@
     <v-container>
       <div class="text">Interested in some kick-ass merch?</div>
       <v-row>
-        <v-col v-for="item in items">
+        <v-col v-for="item in items" :key="item.description">
           <v-img :src="item.image" />
           <div class="description font-weight-bold">{{ item.description }}</div>
           <div class="price">{{ item.price }}</div>
@@ -63,7 +63,7 @@ export default defineComponent({
         
         .v-img {
           max-width: 300px;
-          border: 2px solid white;
+          border: 2px solid black;
           margin: 10px auto;
         }
       }

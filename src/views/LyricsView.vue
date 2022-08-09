@@ -9,6 +9,7 @@
       <v-tab
         v-for="item in songs"
         :value="item.value"
+        :key="item.value"
       >
         <span class="text-capitalize font-weight-bold">
           {{ item.title }}
@@ -19,6 +20,7 @@
       <v-window-item
         v-for="item in songs"
         :value="item.value"
+        :key="item.value"
         transition="false"
         reverse-transition="false"
       >
@@ -38,6 +40,7 @@
       <v-tab
         v-for="item in songs"
         :value="item.value"
+        :key="item.value"
       >
         <span class="text-capitalize font-weight-bold">
           {{ item.title }}
@@ -51,6 +54,7 @@
         <v-window-item
           v-for="item in songs"
           :value="item.value"
+          :key="item.value"
           transition="false"
           reverse-transition="false"
         >
@@ -898,8 +902,9 @@ To find some meaning again\n`
       .v-btn {
         font-family: "Roboto Condensed";
         font-weight: bold;
-        border: 2px solid white;
-        color: white;
+        border: 2px solid black;
+        background: rgba(255, 255, 255, 0.25);
+        color: black;
         letter-spacing: normal;
         font-size: medium;
         transition: all 200ms;
@@ -909,13 +914,13 @@ To find some meaning again\n`
         }
 
         &.v-tab--selected {
-          color: black;
-          background-color: white;
+          color: white;
+          background-color: black;
         }
 
         &:hover {
-          color: black;
-          background-color: white;
+          color: white;
+          background-color: black;
         }
       }
     }
@@ -931,8 +936,9 @@ To find some meaning again\n`
   .v-window {
     width: 100%;
     .v-window-item {
-      border: 2px solid white;
+      border: 2px solid black;
       padding: 16px;
+      background: rgba(255, 255, 255, 0.25)
     }
   }
 

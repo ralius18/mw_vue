@@ -23,13 +23,14 @@ export default defineComponent({
 <style scoped lang="scss">
   .v-btn {
     &:hover, &.active {
-      color: black;
-      background-color: white;
+      color: white;
+      background-color: black;
     }
 
     transition: all 200ms;
     letter-spacing: normal;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid black;
+    color: black;
+    background: rgba(255, 255, 255, 0.25);
   }
 </style>

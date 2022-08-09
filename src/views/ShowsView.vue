@@ -5,7 +5,7 @@
     <h2>Upcoming</h2>
     <v-table v-if="shows.length > 0">
       <tbody>
-        <tr v-for="show in shows">
+        <tr v-for="show in shows" :key="show.date">
           <td>
             <v-row>
               <v-col>
@@ -17,7 +17,7 @@
               </v-col>
               <v-col>
                 With friends:
-                <ul><li v-for="friend in show.friends">{{ friend }}</li></ul>
+                <ul><li v-for="friend in show.friends" :key="friend">{{ friend }}</li></ul>
               </v-col>
             </v-row>
           </td>
@@ -123,7 +123,8 @@ export default defineComponent({
   text-align: center;
 
   .v-table {
-    background: none;
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid black;
 
     th, td {
       font-size: 18px !important;

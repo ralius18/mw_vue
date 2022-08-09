@@ -3,16 +3,31 @@
 
   <v-container>
     <v-row>
+      <v-col align-self="center">
+        <div class="album-title">
+          <div class="text">
+            <h3>{{ albums.iidhyh.title }}</h3>
+            Coming 8th October 2022
+          </div>
+        </div>
+        <v-img class="album-img" :src="albums.iidhyh.imgUrl" />
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col>
         <div class="album-title">
-          <h3>{{ albums.inconvenience.title }}</h3>
+          <div class="text">
+            <h3>{{ albums.inconvenience.title }}</h3>
+          </div>
         </div>
         <v-img class="album-img" :src="albums.inconvenience.imgUrl" />
         <iframe :src="albums.inconvenience.spotifyPlayer" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </v-col>
       <v-col>
         <div class="album-title">
-          <h3>{{ albums.vanish.title }}</h3>
+          <div class="text">
+            <h3>{{ albums.vanish.title }}</h3>
+          </div>
         </div>
         <v-img class="album-img" :src="albums.vanish.imgUrl" />
         <iframe :src="albums.vanish.spotifyPlayer" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -42,6 +57,10 @@ export default defineComponent({
   data () {
     return {
       albums: {
+        iidhyh: {
+          title: 'if i didn\'t have you here',
+          imgUrl: require('@/assets/images/albums/iidhyh.jpg')
+        },
         inconvenience: {
           title: 'Inconvenience',
           imgUrl: require('@/assets/images/albums/inconvenience.jpg'),
@@ -70,17 +89,28 @@ export default defineComponent({
 .album-img {
   width: 300px;
   height: 300px;
-  border: 2px solid white;
-  margin: 20px auto 50px;
+  border: 2px solid #000000;
+  margin: 0 auto 50px;
 }
 
 .album-title {
   height: 100px;
-  display: flex
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid #000000;
+  border-bottom: none;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+
+  .text {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 
 iframe {
-  border: 2px solid white
+  border: 2px solid #000000;
 }
 
 .video {

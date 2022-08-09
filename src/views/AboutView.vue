@@ -68,8 +68,10 @@ export default defineComponent({
   .about-text {
     text-align: center;
     max-width: 540px;
-    padding: 0 20px;
+    padding: 20px 20px;
     margin: 0 auto;
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid black;
   }
 
   .members {
@@ -84,7 +86,7 @@ export default defineComponent({
     }
 
     .member-img {
-      border: 2px solid white;
+      border: 2px solid black;
       width: 200px;
       height: 200px;
       border-radius: 50%;
