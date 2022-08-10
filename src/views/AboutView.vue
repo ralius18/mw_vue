@@ -3,14 +3,14 @@
     <Tabs active="about" />
 
     <div class="about-text">
-      Based in Napier, New Zealand, Mirrored Walls started from humble beginnings as an acoustic set with soothing melodies to stir the soul<br />
+      Mirrored Walls are a Post-Pop-Punk band from Hawke's Bay, New Zealand. Encapsulating Pop&#8209;Punk themes and heavier elements inspired by Post&#8209;Hardcore artists.<br />
+      Or depending on who you talk to.. just call them Emo.<br />
       <br />
-      Now armed with electric guitars, drums and bass, Mirrored Walls becomes an electrifying act with lyrics to provoke thought, music to stir emotion and harmonic vocals to match the intensity that is 'Mirrored Walls'<br />
+      Beginning with just an acoustic guitar in a garage, Mirrored Walls honed their songwriting before adding members and growing their sound.<br />
       <br />
-      An originals band that fits into all tangents of rock, post-pop punk, post-emo, screamo and alternative<br />
+      They are now poised to release their first professionally produced EP:<br /><span class="font-weight-bold">if i didn't have you here</span>.<br />
       <br />
-      We define our own genre<br />
-      <div class="font-weight-bold">We are Mirrored Walls</div>
+      Stick around, the future is bright.<br />
     </div>
       
     <v-container class="members">
@@ -77,7 +77,7 @@ export default defineComponent({
 <style scoped lang="scss">
   .about-text {
     text-align: center;
-    max-width: 540px;
+    max-width: 600px;
     padding: 20px 20px;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.25);
@@ -98,13 +98,12 @@ export default defineComponent({
         border: 2px solid black;
         width: 200px;
         height: 200px;
-        border-radius: 50%;
-        margin-bottom: 10px;
       }
 
       .description {
         background: rgba(255, 255, 255, 0.25);
         border: 2px solid black;
+        border-top: none;
       }
     }
   }

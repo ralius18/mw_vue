@@ -1,6 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  publicPath: '/',
+  publicPath: process.env.NODE_ENV === 'staging' ? '/mw_vue_staging/' : '/',
   transpileDependencies: true,
 
   pluginOptions: {

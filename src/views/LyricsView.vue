@@ -931,6 +931,7 @@ To find some meaning again\n`
     padding-top: 16px;
     overflow-x: auto;
     white-space: pre-wrap;
+    color: white;
   }
 
   .v-window {
@@ -938,7 +939,8 @@ To find some meaning again\n`
     .v-window-item {
       border: 2px solid black;
       padding: 16px;
-      background: rgba(255, 255, 255, 0.25)
+      background: black;
+      color: white;
     }
   }
 
