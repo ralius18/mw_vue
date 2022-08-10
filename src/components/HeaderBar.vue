@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/">
+  <router-link to="/" class="header-link">
     <v-img
       v-if="isHomePage"
       class="logo-img"
@@ -46,6 +46,12 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+.header-link {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 .logo-img {
   margin: 50px;
   transition: opacity 3000ms;
@@ -54,8 +60,9 @@ export default defineComponent({
     opacity: 0;
   }
 }
+
 .text-img {
   margin: 50px auto;
-  height: 100px
+  height: 100px;
 }
 </style>

@@ -19,28 +19,38 @@
       <v-row justify="center">
       <div class="member-div">
         <v-img class="member-img" src="@/assets/images/members/ben.jpg" />
-        <div class="font-weight-bold">Ben Dark</div>
-        Vocals
+        <div class="description">
+          <div class="font-weight-bold">Ben Dark</div>
+          Vocals
+        </div>
       </div>
       <div class="member-div">
         <v-img class="member-img" src="@/assets/images/members/regan.jpg" />
-        <div class="font-weight-bold">Regan Hughes</div>
-        Guitar / Vocals
+        <div class="description">
+          <div class="font-weight-bold">Regan Hughes</div>
+          Guitar / Vocals
+        </div>
       </div>
       <div class="member-div">
         <v-img class="member-img" src="@/assets/images/members/sophie.jpg" />
-        <div class="font-weight-bold">Sophie Dark</div>
-        Vocals
+        <div class="description">
+          <div class="font-weight-bold">Sophie Dark</div>
+          Vocals
+        </div>
       </div>
       <div class="member-div">
         <v-img class="member-img" src="@/assets/images/members/brad.jpg" />
-        <div class="font-weight-bold">Brad Stone</div>
-        Bass
+        <div class="description">
+          <div class="font-weight-bold">Brad Stone</div>
+          Bass
+        </div>
       </div>
       <div class="member-div">
         <v-img class="member-img" src="@/assets/images/members/matthew.jpg" />
-        <div class="font-weight-bold">Matthew Tuite</div>
-        Drums
+        <div class="description">
+          <div class="font-weight-bold">Matthew Tuite</div>
+          Drums
+        </div>
       </div>
       </v-row>
     </v-container>
@@ -83,14 +93,19 @@ export default defineComponent({
     .member-div {
       max-width: 200px;
       margin: 30px 20px;
-    }
 
-    .member-img {
-      border: 2px solid black;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      margin-bottom: 10px;
+      .member-img {
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .description {
+        background: rgba(255, 255, 255, 0.25);
+        border: 2px solid black;
+      }
     }
   }
 </style>

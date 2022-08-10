@@ -1,6 +1,6 @@
 .v-main {
   width: 100%;
-  background: url("./assets/images/iidhyh-bg2.jpg");
+  background: url("./assets/images/iidhyh-bg3.jpg");
   background-position: center top;
   background-repeat: repeat-y;
   background-size: cover;
@@ -34,4 +34,10 @@ body, pre {
   line-height: 1.5;
   margin: 0 auto;
   color: black;
+}
+
+@media only screen and (max-width: 700px) {
+  .v-main {
+    background-size: contain;
+  }
 }

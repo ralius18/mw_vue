@@ -7,7 +7,7 @@
         <div class="album-title">
           <div class="text">
             <h3>{{ albums.iidhyh.title }}</h3>
-            Coming 8th October 2022
+            Coming 7th October 2022
           </div>
         </div>
         <v-img class="album-img" :src="albums.iidhyh.imgUrl" />
