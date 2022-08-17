@@ -908,6 +908,7 @@ To find some meaning again\n`
         letter-spacing: normal;
         font-size: medium;
         transition: all 200ms;
+        text-align: left;
 
         &:not(:last-child) {
           border-bottom: none;

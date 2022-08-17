@@ -77,16 +77,16 @@ export default defineComponent({
           tickets: 'https://www.undertheradar.co.nz/gig/79682/Mirrored-Walls---Bad-Schematics---Grays-Road.utr'
         },
         {
-          venue: 'Venue TBD',
+          venue: 'The Stomach',
           city: 'Palmerston North',
           country: 'NZ',
           date: '10th September \'22',
-          time: 'Time TBD',
+          time: '7.30pm',
           friends: [
             'Bad Schematics',
-            'TBD'
+            'Old Man Pine'
           ],
-          tickets: ''
+          tickets: 'https://www.undertheradar.co.nz/gig/80293/Bad-Schematics-Old-Man-Pine-And-Mirrored-Walls.utr'
         },
         {
           venue: 'Paisley Stage',

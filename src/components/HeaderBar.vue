@@ -49,7 +49,7 @@ export default defineComponent({
 .header-link {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 600px;
 }
 
 .logo-img {

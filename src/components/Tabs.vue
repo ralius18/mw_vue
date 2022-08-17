@@ -1,8 +1,9 @@
 <template>
-  <div class="tabs">
+  <div class="tabs" :class="isMobile() ? 'mobile' : ''">
     <MwBtn :class="aboutIsActive" to="/about">About</MwBtn>
     <MwBtn :class="listenIsActive" to="/listen">Listen</MwBtn>
     <MwBtn :class="showsIsActive" to="/shows">Shows</MwBtn>
+    <br v-if="isMobile()" />
     <MwBtn :class="lyricsIsActive" to="/lyrics">Lyrics</MwBtn>
     <MwBtn :class="merchIsActive" to="/merch">Merch</MwBtn>
   </div>
@@ -17,6 +18,16 @@ export default defineComponent({
   components: { MwBtn },
   props: {
     active: String
+  },
+
+  methods: {
+    isMobile() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   },
 
   computed: {
@@ -43,11 +54,34 @@ export default defineComponent({
 .tabs {
   padding-bottom: 4rem;
   text-align: center;
+
+  &:not(.mobile){
+    .v-btn {
+      &:not(:nth-of-type(5)) {
+        border-right: none;
+      }
+    }
+  }
 }
 
 .active {
   border: 2px solid white;
   background-color: white;
   color: black;
+}
+
+.tabs.mobile {
+  .v-btn {
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(4) {
+      border-right: none;
+    }
+
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      border-top: none;
+    }
+  }
 }
 </style>
