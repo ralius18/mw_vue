@@ -18,35 +18,35 @@
 
       <v-row justify="center">
       <div class="member-div">
-        <v-img class="member-img" src="@/assets/images/members/ben.jpg" />
+        <v-img class="member-img" src="@/assets/images/members/MW-Ben-Digital-small.jpg" />
         <div class="description">
           <div class="font-weight-bold">Ben Dark</div>
           Vocals
         </div>
       </div>
       <div class="member-div">
-        <v-img class="member-img" src="@/assets/images/members/regan.jpg" />
+        <v-img class="member-img" src="@/assets/images/members/MW-Regan-Digital-small.jpg" />
         <div class="description">
           <div class="font-weight-bold">Regan Hughes</div>
           Guitar / Vocals
         </div>
       </div>
       <div class="member-div">
-        <v-img class="member-img" src="@/assets/images/members/sophie.jpg" />
+        <v-img class="member-img" src="@/assets/images/members/MW-Sophie-Digital-small.jpg" />
         <div class="description">
           <div class="font-weight-bold">Sophie Dark</div>
           Vocals
         </div>
       </div>
       <div class="member-div">
-        <v-img class="member-img" src="@/assets/images/members/brad.jpg" />
+        <v-img class="member-img" src="@/assets/images/members/MW-Brad-Digital-small.jpg" />
         <div class="description">
           <div class="font-weight-bold">Brad Stone</div>
           Bass
         </div>
       </div>
       <div class="member-div">
-        <v-img class="member-img" src="@/assets/images/members/matthew.jpg" />
+        <v-img class="member-img" src="@/assets/images/members/MW-Matt-Digital-small.jpg" />
         <div class="description">
           <div class="font-weight-bold">Matthew Tuite</div>
           Drums
@@ -97,7 +97,6 @@ export default defineComponent({
       .member-img {
         border: 2px solid black;
         width: 200px;
-        height: 200px;
       }
 
       .description {
