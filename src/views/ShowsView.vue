@@ -65,18 +65,6 @@ export default defineComponent({
         //   tickets: 'https://undertheradar.co.nz/'
         // },
         {
-          venue: 'Cabana',
-          city: 'Napier',
-          country: 'NZ',
-          date: '19th August \'22',
-          time: '7.30pm',
-          friends: [
-            'Bad Schematics',
-            'Grays Road'
-          ],
-          tickets: 'https://www.undertheradar.co.nz/gig/79682/Mirrored-Walls---Bad-Schematics---Grays-Road.utr'
-        },
-        {
           venue: 'The Stomach',
           city: 'Palmerston North',
           country: 'NZ',
@@ -93,12 +81,12 @@ export default defineComponent({
           city: 'Napier',
           country: 'NZ',
           date: '8th October \'22',
-          time: 'Time TBD',
+          time: '8pm',
           friends: [
             'Bad Schematics',
-            'TBD'
+            'Atlantic Wave'
           ],
-          tickets: ''
+          tickets: 'https://www.undertheradar.co.nz/gig/80424/Mirrored-Walls--Bad-Schematics--Atlantic-Wave.utr'
         }
       ]
     }
