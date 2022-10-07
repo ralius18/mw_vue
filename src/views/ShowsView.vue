@@ -65,18 +65,6 @@ export default defineComponent({
         //   tickets: 'https://undertheradar.co.nz/'
         // },
         {
-          venue: 'The Stomach',
-          city: 'Palmerston North',
-          country: 'NZ',
-          date: '10th September \'22',
-          time: '7.30pm',
-          friends: [
-            'Bad Schematics',
-            'Old Man Pine'
-          ],
-          tickets: 'https://www.undertheradar.co.nz/gig/80293/Bad-Schematics-Old-Man-Pine-And-Mirrored-Walls.utr'
-        },
-        {
           venue: 'Paisley Stage',
           city: 'Napier',
           country: 'NZ',
