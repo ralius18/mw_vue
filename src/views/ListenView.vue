@@ -58,7 +58,7 @@ export default defineComponent({
         }
       },
 
-      youtubePlaylist: `https://youtube.com/embed/videoseries?list=PLgn9dMyvha4idhVHZESuQrxRXfJzs29MQ`
+      youtubePlaylist: `https://youtube.com/embed/videoseries?list=PLgn9dMyvha4gkDyDDkqVgN6vmV5qebBnw`
     }
   }
 });
