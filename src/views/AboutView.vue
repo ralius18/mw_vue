@@ -8,7 +8,7 @@
       <br />
       Beginning with just an acoustic guitar in a garage, Mirrored Walls honed their songwriting before adding members and growing their sound.<br />
       <br />
-      They are now poised to release their first professionally produced EP:<br /><span class="font-weight-bold">if i didn't have you here</span>.<br />
+      They have recently released their first professionally produced EP:<br /><span class="font-weight-bold">if i didn't have you here</span>.<br />
       <br />
       Stick around, the future is bright.<br />
     </div>

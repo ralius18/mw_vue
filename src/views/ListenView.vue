@@ -7,21 +7,10 @@
         <div class="album-title">
           <div class="text">
             <h3>{{ albums.iidhyh.title }}</h3>
-            Coming 7th October 2022
           </div>
         </div>
         <v-img class="album-img" :src="albums.iidhyh.imgUrl" />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div class="album-title">
-          <div class="text">
-            <h3>{{ albums.inconvenience.title }}</h3>
-          </div>
-        </div>
-        <v-img class="album-img" :src="albums.inconvenience.imgUrl" />
-        <iframe :src="albums.inconvenience.spotifyPlayer" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe :src="albums.iidhyh.spotifyPlayer" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </v-col>
       <v-col>
         <div class="album-title">
@@ -59,12 +48,8 @@ export default defineComponent({
       albums: {
         iidhyh: {
           title: 'if i didn\'t have you here',
-          imgUrl: require('@/assets/images/albums/iidhyh.jpg')
-        },
-        inconvenience: {
-          title: 'Inconvenience',
-          imgUrl: require('@/assets/images/albums/inconvenience.jpg'),
-          spotifyPlayer: `https://open.spotify.com/embed/album/3zUJexvHW0Ec4k7uwokpJk`
+          imgUrl: require('@/assets/images/albums/iidhyh.jpg'),
+          spotifyPlayer: `https://open.spotify.com/embed/album/4Vu3zRncg9NzVV1IvFU10E`
         },
         vanish: {
           title: 'These Versions May Vanish If We Record Them In Studio. But For Now, Here\'s Some Music (Live)',

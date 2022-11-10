@@ -65,28 +65,16 @@ export default defineComponent({
         //   tickets: 'https://undertheradar.co.nz/'
         // },
         {
-          venue: 'The Stomach',
-          city: 'Palmerston North',
+          venue: 'Spaceship',
+          city: 'Hastings',
           country: 'NZ',
-          date: '10th September \'22',
-          time: '7.30pm',
+          date: 'Sat Dec 3rd \'22',
+          time: '8.00pm',
           friends: [
-            'Bad Schematics',
-            'Old Man Pine'
+            'Summers Reign',
+            'Realthentic'
           ],
-          tickets: 'https://www.undertheradar.co.nz/gig/80293/Bad-Schematics-Old-Man-Pine-And-Mirrored-Walls.utr'
-        },
-        {
-          venue: 'Paisley Stage',
-          city: 'Napier',
-          country: 'NZ',
-          date: '8th October \'22',
-          time: '8pm',
-          friends: [
-            'Bad Schematics',
-            'Atlantic Wave'
-          ],
-          tickets: 'https://www.undertheradar.co.nz/gig/80424/Mirrored-Walls--Bad-Schematics--Atlantic-Wave.utr'
+          tickets: 'https://www.undertheradar.co.nz/gig/81567/Summers-Reign-w/-Realthentic-%7C-Mirrored-Walls-+-Support-Act.utr'
         }
       ]
     }

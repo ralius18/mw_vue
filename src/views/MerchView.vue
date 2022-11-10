@@ -3,16 +3,18 @@
 
   <div class="merch">
     <v-container>
-      <div class="text">Interested in some kick-ass merch?</div>
       <v-row>
         <v-col v-for="item in items" :key="item.description">
-          <v-img :src="item.image" />
-          <div class="description font-weight-bold">{{ item.description }}</div>
-          <div class="price">{{ item.price }}</div>
+          <div class="">
+            <v-img :src="item.image" />
+            <div class="description">
+              <div class="font-weight-bold">{{ item.description }}</div>
+              <div class="price">{{ item.price }}</div>
+            </div>
+          </div>
         </v-col>
       </v-row>
-      <MwBtn href="mailto:mirroredwallsband@gmail.com?subject=I need your merch!&body=Hello awesome band people, I need to purchase your merch">Contact us to organise a purchase</MwBtn>
-      <div class="text">Or hit us up on any socials</div>
+      <MwBtn href="https://www.facebook.com/MirroredWalls/shop_tab" target="_blank">Purchase</MwBtn>
     </v-container>
   </div>
 </template>
@@ -31,8 +33,13 @@ export default defineComponent({
     return {
       items: [
         {
+          image: require('@/assets/images/merch/cap-small.jpg'),
+          description: 'Cap',
+          price: '$20'
+        },
+        {
           image: require('@/assets/images/merch/beanie.jpg'),
-          description: 'Beanie',
+          description: 'Beanie - Limited Stock',
           price: '$25'
         }
       ]
@@ -50,6 +57,7 @@ export default defineComponent({
   .merch {
     text-align: center;
     margin: 0 auto 50px;
+
     .v-container {
       max-width: 800px;
       margin: 0 auto;
@@ -57,14 +65,14 @@ export default defineComponent({
     }
 
     .v-row {
-      margin: 30px auto;
+      margin: 0 auto;
 
       .v-col {
-        
+        max-width: 300px;
+        margin: 0 auto 30px;
         .v-img {
-          max-width: 300px;
           border: 2px solid black;
-          margin: 10px auto;
+          margin: 0 auto;
         }
       }
     }
@@ -74,7 +82,10 @@ export default defineComponent({
     }
 
     .description {
-      padding-top: 10px;
+      padding: 10px 0;
+      background: rgba(255, 255, 255, 0.25);
+      border: 2px solid black;
+      border-top: none;
     }
   }
 </style>
