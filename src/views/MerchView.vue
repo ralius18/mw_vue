@@ -35,7 +35,7 @@ export default defineComponent({
         {
           image: require('@/assets/images/merch/cap-small.jpg'),
           description: 'Cap',
-          price: '$20'
+          price: '$25'
         },
         {
           image: require('@/assets/images/merch/beanie.jpg'),
