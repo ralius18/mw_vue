@@ -1,6 +1,10 @@
 <template>
   <Tabs active="listen" />
 
+  <div class="video">
+    <iframe :src="youtubePlaylist" allowtransparency="true" allow="encrypted-media" />
+  </div>
+
   <v-container>
     <v-row>
       <v-col align-self="center">
@@ -10,7 +14,7 @@
           </div>
         </div>
         <v-img class="album-img" :src="albums.iidhyh.imgUrl" />
-        <iframe :src="albums.iidhyh.spotifyPlayer" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe class="spotify" :src="albums.iidhyh.spotifyPlayer" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </v-col>
       <v-col>
         <div class="album-title">
@@ -19,14 +23,10 @@
           </div>
         </div>
         <v-img class="album-img" :src="albums.vanish.imgUrl" />
-        <iframe :src="albums.vanish.spotifyPlayer" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe class="spotify" :src="albums.vanish.spotifyPlayer" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </v-col>
     </v-row>
   </v-container>
-
-  <div class="video">
-    <iframe :src="youtubePlaylist" allowtransparency="true" allow="encrypted-media" />
-  </div>
 
 </template>
 
@@ -94,7 +94,7 @@ export default defineComponent({
   }
 }
 
-iframe {
+iframe:not(.spotify) {
   border: 2px solid #000000;
 }
 
@@ -102,12 +102,11 @@ iframe {
   width: 800px;
   aspect-ratio: 16 / 9;
   max-width: 90%;
-  margin: 50px auto;
+  margin: 0px auto 50px auto;
 
   & iframe{
     width: 100%;
     height: 100%;
-    // border: none;
   }
 }
 </style>

@@ -186,41 +186,41 @@ You screwed me over, ran away but somehow I still need you\n\
 I never wanna see your face again but for some reason\n\
 You're still upon the inside of my eyelids\n`
         },
-        { 
-          value: 'forgotten_oath',
-          title: 'Forgotten Oath',
-          lyrics: `You're tidal, eternal\n\
-Your ebb and flow the strongest hold\n\
-Never thought that my faith would wane\n\
-But I never thought I'd be on my own\n\
-You abandoned me here, You left me on my own\n\
-\n\
-I will not bow and scrape, bend my knee for your sake\n\
-Breaking I've lost all my faith in all that you are\n\
-Wandering streets in the night, begging with headlights\n\
-To take me away from this place of remorse and disgust, with what I've become\n\
-\n\
-Now I'm liberated from your arms\n\
-Overwhelmed by the emptiness\n\
-My world faded and starved while I was your puppet\n\
-You abandoned me here, Were you ever sincere, Tell me\n\
-\n\
-I will not bow and scrape, bend my knee for your sake\n\
-Breaking I've lost all my faith in all that you are\n\
-Wandering streets in the night, begging with headlights\n\
-To take me away from this place of remorse and disgust, with what I've become\n\
-\n\
-Couldn't see your dark side, all that you tried to hide\n\
-Tangled within your net, manipulated\n\
-Now I've seen your dark side, all that you tried to hide\n\
-Free from within your net, I'm the catch you should have kept\n\
-\n\
-I will not bow and scrape, bend my knee for your sake\n\
-Breaking I've lost all my faith in all that you are\n\
-Wandering streets in the night, begging with headlights\n\
-To take me away from this place of remorse and disgust, with what I've become\n\
-With what I've become\n`
-        },
+//         { 
+//           value: 'forgotten_oath',
+//           title: 'Forgotten Oath',
+//           lyrics: `You're tidal, eternal\n\
+// Your ebb and flow the strongest hold\n\
+// Never thought that my faith would wane\n\
+// But I never thought I'd be on my own\n\
+// You abandoned me here, You left me on my own\n\
+// \n\
+// I will not bow and scrape, bend my knee for your sake\n\
+// Breaking I've lost all my faith in all that you are\n\
+// Wandering streets in the night, begging with headlights\n\
+// To take me away from this place of remorse and disgust, with what I've become\n\
+// \n\
+// Now I'm liberated from your arms\n\
+// Overwhelmed by the emptiness\n\
+// My world faded and starved while I was your puppet\n\
+// You abandoned me here, Were you ever sincere, Tell me\n\
+// \n\
+// I will not bow and scrape, bend my knee for your sake\n\
+// Breaking I've lost all my faith in all that you are\n\
+// Wandering streets in the night, begging with headlights\n\
+// To take me away from this place of remorse and disgust, with what I've become\n\
+// \n\
+// Couldn't see your dark side, all that you tried to hide\n\
+// Tangled within your net, manipulated\n\
+// Now I've seen your dark side, all that you tried to hide\n\
+// Free from within your net, I'm the catch you should have kept\n\
+// \n\
+// I will not bow and scrape, bend my knee for your sake\n\
+// Breaking I've lost all my faith in all that you are\n\
+// Wandering streets in the night, begging with headlights\n\
+// To take me away from this place of remorse and disgust, with what I've become\n\
+// With what I've become\n`
+//         },
         { 
           value: 'from_my_chest',
           title: 'From My Chest',

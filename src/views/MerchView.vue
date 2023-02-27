@@ -38,6 +38,11 @@ export default defineComponent({
           price: '$25'
         },
         {
+          image: require('@/assets/images/merch/tshirt.jpg'),
+          description: 'T-Shirt',
+          price: '$30'
+        },
+        {
           image: require('@/assets/images/merch/beanie.jpg'),
           description: 'Beanie - Limited Stock',
           price: '$25'

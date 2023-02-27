@@ -16,7 +16,7 @@
                 </b>
               </v-col>
               <v-col>
-                With friends:
+                <i>With friends:</i>
                 <ul><li v-for="friend in show.friends" :key="friend">{{ friend }}</li></ul>
               </v-col>
             </v-row>
@@ -65,16 +65,31 @@ export default defineComponent({
         //   tickets: 'https://undertheradar.co.nz/'
         // },
         {
-          venue: 'Spaceship',
-          city: 'Hastings',
+          venue: 'Ding Dong Lounge',
+          city: 'Auckland',
           country: 'NZ',
-          date: 'Sat Dec 3rd \'22',
-          time: '8.00pm',
+          date: 'Fri March 10th \'23',
+          time: '7.30pm',
           friends: [
-            'Summers Reign',
-            'Realthentic'
+            'Holloway',
+            'Bad Schematics',
+            'Finger Tight'
           ],
-          tickets: 'https://www.undertheradar.co.nz/gig/81567/Summers-Reign-w/-Realthentic-%7C-Mirrored-Walls-+-Support-Act.utr'
+          tickets: 'https://www.dingdongloungenz.com/event-details/pity-party?fbclid=IwAR279ZZgkdjP0NcckGuz5H0cDsqIqJtZfaOefEw_snb-VW3xKfb0JeM6rTA'
+        },
+        {
+          venue: 'Meow',
+          city: 'Wellington',
+          country: 'NZ',
+          date: 'Sat April 15th \'23',
+          time: 'Time TBC',
+          friends: [
+            'LUNG',
+            'REID',
+            'Electric Tapestry',
+            'Happy Two'
+          ],
+          tickets: ''
         }
       ]
     }
