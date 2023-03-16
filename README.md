@@ -1,4 +1,6 @@
-# mw_vue
+# Mirrored Walls - Vue
+
+Vue version of the Mirrored Walls website
 
 ## Project setup
 ```
@@ -14,6 +16,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

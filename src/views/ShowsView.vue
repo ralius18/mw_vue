@@ -65,19 +65,6 @@ export default defineComponent({
         //   tickets: 'https://undertheradar.co.nz/'
         // },
         {
-          venue: 'Ding Dong Lounge',
-          city: 'Auckland',
-          country: 'NZ',
-          date: 'Fri March 10th \'23',
-          time: '7.30pm',
-          friends: [
-            'Holloway',
-            'Bad Schematics',
-            'Finger Tight'
-          ],
-          tickets: 'https://www.dingdongloungenz.com/event-details/pity-party?fbclid=IwAR279ZZgkdjP0NcckGuz5H0cDsqIqJtZfaOefEw_snb-VW3xKfb0JeM6rTA'
-        },
-        {
           venue: 'Meow',
           city: 'Wellington',
           country: 'NZ',
@@ -89,7 +76,7 @@ export default defineComponent({
             'Electric Tapestry',
             'Happy Two'
           ],
-          tickets: ''
+          tickets: 'https://www.moshtix.co.nz/v2/event/lung-album-release-party-meow-with-mirrored-walls-dave-and-the-dirty-humans/150666'
         }
       ]
     }

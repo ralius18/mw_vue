@@ -45,7 +45,7 @@ export default defineComponent({
         {
           image: require('@/assets/images/merch/beanie.jpg'),
           description: 'Beanie - Limited Stock',
-          price: '$25'
+          price: '$20'
         }
       ]
     }
