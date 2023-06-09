@@ -17,41 +17,48 @@
       <h2>Members</h2>
 
       <v-row justify="center">
-      <div class="member-div">
-        <v-img class="member-img" src="@/assets/images/members/MW-Ben-Digital-small.jpg" />
-        <div class="description">
-          <div class="font-weight-bold">Ben Dark</div>
-          Vocals
+        <div class="member-div">
+          <v-img class="member-img" src="@/assets/images/members/MW-Ben-Digital-small.jpg" />
+          <div class="description">
+            <div class="font-weight-bold">Ben Dark</div>
+            Vocals
+          </div>
         </div>
-      </div>
-      <div class="member-div">
-        <v-img class="member-img" src="@/assets/images/members/MW-Regan-Digital-small.jpg" />
-        <div class="description">
-          <div class="font-weight-bold">Regan Hughes</div>
-          Guitar / Vocals
+        <div class="member-div">
+          <v-img class="member-img" src="@/assets/images/members/MW-Regan-Digital-small.jpg" />
+          <div class="description">
+            <div class="font-weight-bold">Regan Hughes</div>
+            Guitar / Vocals
+          </div>
         </div>
-      </div>
-      <div class="member-div">
-        <v-img class="member-img" src="@/assets/images/members/MW-Sophie-Digital-small.jpg" />
-        <div class="description">
-          <div class="font-weight-bold">Sophie Dark</div>
-          Vocals
+        <div class="member-div">
+          <v-img class="member-img" src="@/assets/images/members/MW-Sophie-Digital-small.jpg" />
+          <div class="description">
+            <div class="font-weight-bold">Sophie Dark</div>
+            Vocals
+          </div>
         </div>
-      </div>
-      <div class="member-div">
-        <v-img class="member-img" src="@/assets/images/members/MW-Brad-Digital-small.jpg" />
-        <div class="description">
-          <div class="font-weight-bold">Brad Stone</div>
-          Bass
+        <div class="member-div">
+          <v-img class="member-img" src="@/assets/images/members/MW-Brad-Digital-small.jpg" />
+          <div class="description">
+            <div class="font-weight-bold">Brad Stone</div>
+            Bass
+          </div>
         </div>
-      </div>
-      <div class="member-div">
-        <v-img class="member-img" src="@/assets/images/members/MW-Matt-Digital-small.jpg" />
-        <div class="description">
-          <div class="font-weight-bold">Matthew Tuite</div>
-          Drums
+        <div class="member-div">
+          <v-img class="member-img" src="@/assets/images/members/MW-Matt-Digital-small.jpg" />
+          <div class="description">
+            <div class="font-weight-bold">Matthew Tuite</div>
+            Drums
+          </div>
         </div>
-      </div>
+        <div class="member-div">
+          <v-img class="member-img" src="@/assets/images/members/MW-Caleb-Digital-small.jpg" />
+          <div class="description">
+            <div class="font-weight-bold">Caleb Dark</div>
+            Guitar / Synth
+          </div>
+        </div>
       </v-row>
     </v-container>
   </div>

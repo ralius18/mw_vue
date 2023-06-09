@@ -65,18 +65,17 @@ export default defineComponent({
         //   tickets: 'https://undertheradar.co.nz/'
         // },
         {
-          venue: 'Meow',
-          city: 'Wellington',
+          venue: 'Paisley Stage',
+          city: 'Napier',
           country: 'NZ',
-          date: 'Sat April 15th \'23',
-          time: 'Time TBC',
+          date: '26th August \'23',
+          time: '8pm',
           friends: [
-            'LUNG',
-            'REID',
-            'Electric Tapestry',
-            'Happy Two'
+            'Kita Turner-Low',
+            'Blinding White Lights',
+            'Holloway'
           ],
-          tickets: 'https://www.moshtix.co.nz/v2/event/lung-album-release-party-meow-with-mirrored-walls-dave-and-the-dirty-humans/150666'
+          tickets: 'https://www.undertheradar.co.nz/tour/20695/Mirrored-Walls--Holloway--Blinding-White-Lights--Kita-Turner-Low.utr'
         }
       ]
     }
