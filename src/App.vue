@@ -14,6 +14,9 @@
 import { defineComponent } from 'vue'
 import HeaderBar from '@/components/HeaderBar.vue';
 import FooterIcons from '@/components/FooterIcons.vue';
+import { toRef } from 'vue';
+import { showsRef } from './firebase';
+import { useCollection } from 'vuefire';
 
 export default defineComponent({
   name: 'App',
@@ -25,6 +28,10 @@ export default defineComponent({
 
   data () {
     return { }
+  },
+
+  mounted () {
+    useCollection(showsRef, { target: toRef(this.$store.state, 'shows')})
   }
 })
 </script>

@@ -3,14 +3,14 @@
 
   <div class="shows-table">
     <h2>Upcoming</h2>
-    <v-table v-if="shows.length > 0">
+    <v-table v-if="upcomingShows.length > 0">
       <tbody>
-        <tr v-for="show in shows" :key="show.date">
+        <tr v-for="show in upcomingShows" :key="show.date">
           <td>
             <v-row>
               <v-col>
                 <b>
-                  {{ show.date }} - {{ show.time }}<br>
+                  {{ formatDate(show.date) }}<br>
                   {{ show.venue }}<br>
                   {{ show.city }}, {{ show.country }}<br>
                 </b>
@@ -23,7 +23,7 @@
           </td>
           <td>
             <MwBtn :href="show.tickets" target="_blank">
-              <div v-if="show.tickets != ''">Tickets</div>
+              <div v-if="show.tickets && show.tickets != ''">Tickets</div>
               <div v-else>Tickets<br>Available Soon</div>
             </MwBtn>
           </td>
@@ -42,6 +42,8 @@ import { defineComponent } from 'vue';
 // Components
 import Tabs from '@/components/Tabs.vue';
 import MwBtn from '@/components/MwBtn.vue';
+import { mapGetters } from 'vuex'
+import moment from 'moment'
 
 export default defineComponent({
   name: 'ShowsView',
@@ -53,31 +55,7 @@ export default defineComponent({
 
   data() {
     return {
-      shows: [
-        // {
-        //   location: 'Cabana',
-        //   date: '23/04/22',
-        //   time: '7pm',
-        //   friends: [
-        //     'Sons of Henrik',
-        //     'Happy Apathy'
-        //   ],
-        //   tickets: 'https://undertheradar.co.nz/'
-        // },
-        {
-          venue: 'Paisley Stage',
-          city: 'Napier',
-          country: 'NZ',
-          date: '26th August \'23',
-          time: '8pm',
-          friends: [
-            'Kita Turner-Low',
-            'Blinding White Lights',
-            'Holloway'
-          ],
-          tickets: 'https://www.undertheradar.co.nz/tour/20695/Mirrored-Walls--Holloway--Blinding-White-Lights--Kita-Turner-Low.utr'
-        }
-      ]
+      // shows: this.$store.getters.upcomingShows
     }
   },
 
@@ -88,7 +66,15 @@ export default defineComponent({
       } else {
         return false;
       }
+    },
+
+    formatDate(timestamp) {
+      return moment(timestamp.toDate()).format('ddd Do MMM \'YY - h:mm a')
     }
+  },
+
+  computed: {
+    ...mapGetters(['upcomingShows'])
   }
 });
 </script>

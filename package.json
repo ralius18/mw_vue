@@ -11,10 +11,14 @@
   "dependencies": {
     "@mdi/font": "5.9.55",
     "core-js": "^3.8.3",
+    "firebase": "^10.5.0",
+    "moment": "^2.29.4",
+    "pinia": "^2.1.4",
     "roboto-fontface": "*",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuetify": "^3.0.0-beta.0",
+    "vuex": "^4.1.0",
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
@@ -27,6 +31,7 @@
     "sass-loader": "^10.0.0",
     "typescript": "~4.5.5",
     "vue-cli-plugin-vuetify": "^2.4.8",
+    "vuefire": "^3.1.17",
     "vuetify-loader": "^2.0.0-alpha.0"
   },
   "browserslist": [
