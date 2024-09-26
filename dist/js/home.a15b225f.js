@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmw_vue"]=self["webpackChunkmw_vue"]||[]).push([[962],{7791:function(e,n,u){u.r(n),u.d(n,{default:function(){return v}});var t=u(6768);function a(e,n,u,a,c,o){const r=(0,t.g2)("Tabs");return(0,t.uX)(),(0,t.Wv)(r,{active:"home"})}var c=u(973),o=u(6327),r=(0,t.pM)({name:"HomeView",components:{Tabs:o.A},computed:{isHomePage:()=>"home"==(0,c.rd)().currentRoute.value.name}}),s=u(1241);const m=(0,s.A)(r,[["render",a],["__scopeId","data-v-0dfc047c"]]);var v=m}}]);
+//# sourceMappingURL=home.a15b225f.js.map
