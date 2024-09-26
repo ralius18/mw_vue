@@ -26,6 +26,10 @@ import { defineComponent } from 'vue';
 import Tabs from '@/components/Tabs.vue';
 import MwBtn from '@/components/MwBtn.vue';
 
+import capImage from '@/assets/images/merch/cap-small.jpg';
+import shirtImage from '@/assets/images/merch/tshirt.jpg';
+import beanieImage from '@/assets/images/merch/beanie.jpg';
+
 export default defineComponent({
   name: 'MerchView',
 
@@ -33,17 +37,17 @@ export default defineComponent({
     return {
       items: [
         {
-          image: require('@/assets/images/merch/cap-small.jpg'),
+          image: capImage,
           description: 'Cap',
           price: '$25'
         },
         {
-          image: require('@/assets/images/merch/tshirt.jpg'),
+          image: shirtImage,
           description: 'T-Shirt',
           price: '$30'
         },
         {
-          image: require('@/assets/images/merch/beanie.jpg'),
+          image: beanieImage,
           description: 'Beanie - Limited Stock',
           price: '$20'
         }

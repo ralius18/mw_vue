@@ -8,15 +8,13 @@ import { useRouter } from 'vue-router';
 
 // Components
 import Tabs from '../components/Tabs.vue';
-import HeaderBar from '../components/HeaderBar.vue';
 
 export default defineComponent({
   name: 'HomeView',
 
   components: {
-    Tabs,
-    HeaderBar
-},
+    Tabs
+  },
 
   computed: {
     isHomePage: () => {

@@ -14,3 +14,4 @@ export const firebaseApp = initializeApp({
 export const db = getFirestore(firebaseApp)
 
 export const showsRef = collection(db, 'shows')
+export const lyricsRef = collection(db, 'lyrics')

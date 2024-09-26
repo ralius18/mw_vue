@@ -14,7 +14,7 @@ import { defineComponent } from 'vue';
 import MwBtn from "@/components/MwBtn.vue";
 
 export default defineComponent({
-  name: 'Tabs',
+  name: 'TabsComponent',
   components: { MwBtn },
   props: {
     active: String

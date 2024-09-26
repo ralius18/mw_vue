@@ -11,11 +11,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, toRef } from 'vue'
 import HeaderBar from '@/components/HeaderBar.vue';
 import FooterIcons from '@/components/FooterIcons.vue';
-import { toRef } from 'vue';
-import { showsRef } from './firebase';
+import { lyricsRef, showsRef } from './firebase';
 import { useCollection } from 'vuefire';
 
 export default defineComponent({
@@ -32,6 +31,7 @@ export default defineComponent({
 
   mounted () {
     useCollection(showsRef, { target: toRef(this.$store.state, 'shows')})
+    useCollection(lyricsRef, { target: toRef(this.$store.state, 'lyrics')})
   }
 })
 </script>

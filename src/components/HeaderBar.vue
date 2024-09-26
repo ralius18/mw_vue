@@ -38,7 +38,7 @@ export default defineComponent({
   },
 
   computed: {
-    isHomePage (): Boolean {
+    isHomePage (): boolean {
       return useRouter().currentRoute.value.name == 'home'
     }
   }

@@ -6,12 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build_staging": "vue-cli-service build --mode staging",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "lint": "eslint src --fix"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
     "core-js": "^3.8.3",
-    "firebase": "^10.5.0",
+    "firebase": "^10.13.2",
     "moment": "^2.29.4",
     "pinia": "^2.1.4",
     "roboto-fontface": "*",
@@ -22,14 +23,19 @@
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.11.1",
     "@types/webfontloader": "^1.0.0",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "eslint": "^9.11.1",
+    "eslint-plugin-vue": "^9.28.0",
+    "globals": "^15.9.0",
     "sass": "^1.38.0",
     "sass-loader": "^10.0.0",
     "typescript": "~4.5.5",
+    "typescript-eslint": "^8.7.0",
     "vue-cli-plugin-vuetify": "^2.4.8",
     "vuefire": "^3.1.17",
     "vuetify-loader": "^2.0.0-alpha.0"

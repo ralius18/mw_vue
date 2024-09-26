@@ -36,6 +36,9 @@ import { defineComponent } from 'vue';
 // Components
 import Tabs from '@/components/Tabs.vue';
 
+import iidyhImage from '@/assets/images/albums/iidhyh.jpg';
+import vanishImage from '@/assets/images/albums/vanish.jpg';
+
 export default defineComponent({
   name: 'ListenView',
 
@@ -48,12 +51,12 @@ export default defineComponent({
       albums: {
         iidhyh: {
           title: 'if i didn\'t have you here',
-          imgUrl: require('@/assets/images/albums/iidhyh.jpg'),
+          imgUrl: iidyhImage,
           spotifyPlayer: `https://open.spotify.com/embed/album/4Vu3zRncg9NzVV1IvFU10E`
         },
         vanish: {
           title: 'These Versions May Vanish If We Record Them In Studio. But For Now, Here\'s Some Music (Live)',
-          imgUrl: require('@/assets/images/albums/vanish.jpg'),
+          imgUrl: vanishImage,
           spotifyPlayer: `https://open.spotify.com/embed/album/4Ztmg6XikrrwdZkvQAcay0`
         }
       },

@@ -69,15 +69,13 @@ import { defineComponent } from 'vue';
 
 // Components
 import Tabs from '@/components/Tabs.vue';
-import HeaderBar from '@/components/HeaderBar.vue';
 
 export default defineComponent({
   name: 'AboutView',
 
   components: {
-    Tabs,
-    HeaderBar
-},
+    Tabs
+  }
 });
 </script>
 
