@@ -11,7 +11,7 @@
         :value="item.value"
         :key="item.value"
       >
-        <span class="text-capitalize font-weight-bold">
+        <span class="text-capitalize font-weight-bold text-wrap">
           {{ item.title }}
         </span>
       </v-tab>
