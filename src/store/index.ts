@@ -13,6 +13,7 @@ interface Show {
 interface Song {
   title: string;
   lyrics: string;
+  hidden: boolean;
 }
 
 export default createStore({
@@ -44,7 +45,12 @@ export default createStore({
     },
     
     lyricsData: (state) => {
-      return state.lyrics.sort((a: Song, b: Song) => a.title.localeCompare(b.title))
+      return state.lyrics
+        .sort((a: Song, b: Song) => a.title.localeCompare(b.title))
+        .map((song: Song) => ({
+          ...song,
+          value: song.title
+        }))
     }
   }
 })

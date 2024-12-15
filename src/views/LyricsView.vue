@@ -7,7 +7,7 @@
       v-model="tab"
     >
       <v-tab
-        v-for="item in lyricsData"
+        v-for="item in filtered"
         :value="item.value"
         :key="item.value"
       >
@@ -18,7 +18,7 @@
     </v-tabs>
     <v-window v-model="tab">
       <v-window-item
-        v-for="item in lyricsData"
+        v-for="item in filtered"
         :value="item.value"
         :key="item.title"
         transition="false"
@@ -38,11 +38,11 @@
     >
       <v-tab style="display: none" value=""></v-tab>
       <v-tab
-        v-for="item in lyricsData"
+        v-for="(item, i) in filtered"
         :value="item.value"
-        :key="item.title"
+        :key="i"
       >
-        <span class="text-capitalize font-weight-bold">
+        <span class="text-capitalize font-weight-bold text-wrap">
           {{ item.title }}
         </span>
       </v-tab>
@@ -52,9 +52,9 @@
       <MwBtn class="back-btn" @click="clearSelectedTab()">Back</MwBtn>
       <v-window v-model="tab">
         <v-window-item
-          v-for="item in lyricsData"
+          v-for="(item, i) in filtered"
           :value="item.value"
-          :key="item.title"
+          :key="i"
           transition="false"
           reverse-transition="false"
         >
@@ -85,7 +85,11 @@ export default defineComponent({
   },
 
   computed: {
-    ...mapGetters(['lyricsData'])
+    ...mapGetters(['lyricsData']),
+    filtered: function () {
+      const hasAccess = this.$route.query.secret === "please"
+      return hasAccess ? this.lyricsData : this.lyricsData.filter(x => !x.hidden)
+    }
   },
 
   components: {

@@ -38,6 +38,18 @@ const router = createRouter({
   routes
 })
 
+function hasQueryParams(route) {
+  return !!Object.keys(route.query).length
+}
+
+router.beforeEach((to, from, next) => {
+   if(!hasQueryParams(to) && hasQueryParams(from)){
+    next({name: to.name?.toString(), query: from.query});
+  } else {
+    next()
+  }
+})
+
 router.afterEach((to) => {
   let title = 'Mirrored Walls';
   if (to.name && to.name !== 'home') {
